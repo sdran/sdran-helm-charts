@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 //
-// SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+// SPDX-License-Identifier: Apache-2.0
 
 package main
 
@@ -26,18 +26,18 @@ const yamlAppsTemplate = "{{ printf \"#ONOS Helm Chart Releases\"}}\n\n" +
 	"{{end}}\n"
 
 type Chart struct {
-	ApiVersion string `yaml:"apiVersion"`
-	AppVersion string `yaml:"appVersion"`
-	Version string `yaml:"version"`
-	Created string `yaml:"created"`
-	Description string `yaml:"description"`
-	Urls []string `yaml:"urls"`
+	ApiVersion  string   `yaml:"apiVersion"`
+	AppVersion  string   `yaml:"appVersion"`
+	Version     string   `yaml:"version"`
+	Created     string   `yaml:"created"`
+	Description string   `yaml:"description"`
+	Urls        []string `yaml:"urls"`
 }
 
 type IndexYaml struct {
-	ApiVersion string `yaml:"apiVersion"`
+	ApiVersion string             `yaml:"apiVersion"`
 	Entries    map[string][]Chart `yaml:"entries"`
-	Generated string `yaml:"generated"`
+	Generated  string             `yaml:"generated"`
 }
 
 /**

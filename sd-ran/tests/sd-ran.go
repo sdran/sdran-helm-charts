@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 //
-// SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+// SPDX-License-Identifier: Apache-2.0
 
 package tests
 
@@ -53,7 +53,7 @@ func (s *SDRANSuite) TestInstall(t *testing.T) {
 		Release("sd-ran").
 		SetUsername(username).
 		SetPassword(password).
-		WithTimeout(15 * time.Minute).
+		WithTimeout(15*time.Minute).
 		Set("import.onos-gui.enabled", false).
 		Set("onos-ric.service.external.nodePort", 0).
 		Set("onos-ric-ho.service.external.nodePort", 0).
